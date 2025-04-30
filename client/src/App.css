@@ -1,0 +1,19 @@
+.App {
+  background-color: #f4f7fa;
+  padding: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+}
+
+button:hover {
+  background-color: #45a049;
+}
