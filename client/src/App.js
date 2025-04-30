@@ -12,7 +12,7 @@ const App = () => {
   const fetchNotes = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:5000/notes');
+      const response = await axios.get('https://mini-notes-appproj.onrender.com/notes');
       setNotes(response.data); // Set notes to the state
     } catch (err) {
       console.error('Error fetching notes', err);
@@ -24,7 +24,7 @@ const App = () => {
   const addNote = async (noteData) => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/notes', noteData);
+      const response = await axios.post('https://mini-notes-appproj.onrender.com/notes', noteData);
       fetchNotes(); // Refresh the notes after adding
     } catch (err) {
       console.error('Error adding note', err);
@@ -36,7 +36,7 @@ const App = () => {
   const deleteNote = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:5000/notes/${id}`);
+      await axios.delete(`https://mini-notes-appproj.onrender.com/notes/${id}`);
       fetchNotes(); // Refresh notes after deleting
     } catch (err) {
       console.error('Error deleting note', err);
