@@ -21,6 +21,11 @@ mongoose.connect(process.env.MONGO_URI, {
 const notesRouter = require('./routes/notes');
 app.use('/notes', notesRouter);
 
+// ✅ Add this:
+app.get('/', (req, res) => {
+  res.send('Mini Notes App backend is running');
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
